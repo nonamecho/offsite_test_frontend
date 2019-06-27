@@ -23,10 +23,10 @@ class App extends React.Component {
   async componentDidMount() {
     await this.setState({ isFetching: true });
     const topFreeRes = await fetch(
-      `http://nonamecho.eu-4.evennode.com/topFree.json`
+      `https://nonamecho.eu-4.evennode.com/topFree.json`
     );
     const topGrossingRes = await fetch(
-      `http://nonamecho.eu-4.evennode.com/topGrossing.json`
+      `https://nonamecho.eu-4.evennode.com/topGrossing.json`
     );
     await topFreeRes.json().then(data => {
       this.setState({
